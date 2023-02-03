@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "select-top-image-models"
+  site-url: "https://geg00.github.io/select-top-image-models"
+  description: "Loop through image models to find the best model for the data submitted suing timm"
+  repo-branch: main
+  repo-url: "https://github.com/geg00/select-top-image-models"
