@@ -5,4 +5,10 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://geg00.github.io',
                 'git_url': 'https://github.com/geg00/select-top-image-models',
                 'lib_path': 'select_top_image_models'},
-  'syms': {'select_top_image_models.core': {'select_top_image_models.core.foo': ('core.html#foo', 'select_top_image_models/core.py')}}}
+  'syms': { 'select_top_image_models.core': { 'select_top_image_models.core.get_images': ( 'core.html#get_images',
+                                                                                           'select_top_image_models/core.py'),
+                                              'select_top_image_models.core.get_label': ( 'core.html#get_label',
+                                                                                          'select_top_image_models/core.py'),
+                                              'select_top_image_models.core.main': ('core.html#main', 'select_top_image_models/core.py'),
+                                              'select_top_image_models.core.train': ( 'core.html#train',
+                                                                                      'select_top_image_models/core.py')}}}
