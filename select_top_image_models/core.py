@@ -8,17 +8,17 @@ from fastai.vision.all import *
 path = Path('/home/gegg00/Desktop/aiornot/')
 df = pd.read_csv(path/'train.csv')
 
-# %% ../nbs/00_core.ipynb 4
+# %% ../nbs/00_core.ipynb 5
 def get_images(path):
     return [path/'data/train'/i[0] for i in df.values]
 
 def get_label(o):
     return df.iloc[Int(os.path.basename(o).split('.')[0])]['label'] 
 
-# %% ../nbs/00_core.ipynb 6
+# %% ../nbs/00_core.ipynb 7
 tst_files = get_image_files(path/'data/test').sorted()
 
-# %% ../nbs/00_core.ipynb 8
+# %% ../nbs/00_core.ipynb 9
 def train(arch, size, accum=1, finetune=True, epochs=12):
     dls = DataBlock(
         blocks=(ImageBlock, CategoryBlock), 
@@ -37,7 +37,7 @@ def train(arch, size, accum=1, finetune=True, epochs=12):
         learn.unfreeze()
         learn.fit_one_cycle(epochs, 0.01)
 
-# %% ../nbs/00_core.ipynb 9
+# %% ../nbs/00_core.ipynb 10
 from fastcore.script import *
 @call_parse
 
